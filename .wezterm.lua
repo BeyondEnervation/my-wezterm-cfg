@@ -26,6 +26,12 @@ for i = 1, 8 do
 		action = act.ActivateTab(i - 1),
 	})
 end
+
+local act = wezterm.action
+
+table.insert(config.keys, { key = 'u', mods = 'ALT', action = act.ScrollByPage(-1.0) })
+table.insert(config.keys, { key = 'd', mods = 'ALT', action = act.ScrollByPage(1.0) })
+
 -- Windows WSL
 config.default_domain = 'WSL:Ubuntu'
 -- Font
